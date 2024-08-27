@@ -8,4 +8,4 @@ username == admin
 
 ## user 
 In this project, the user can participate in the race by clicking the request button to send the information to the manager. The manager will then approve the request and assign the user a personal account with a default password of 0000. After that, the user can change their password.
-For more information, please visit this link  
+For more information, please visit this link  https://github.com/abdallah-dh/Project-Rally-using-js-/blob/main/aidz.html
