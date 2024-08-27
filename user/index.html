@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Admin</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <!--===============================================================================================-->
+    <link rel="stylesheet" type="text/css" href="css/main.css" />
+    <!--===============================================================================================-->
+  </head>
+  <body class="background">
+    <div class="flex">
+      <div class="BtnStyle logout">
+        <button onclick="Profile()">
+          Profile
+        </button>
+      </div>
+      <div class="BtnStyle logout">
+        <button onclick="logout()" class="login100-form-btn">
+          logout
+        </button>
+      </div>
+    </div>
+    <h4
+      style="
+        text-align: center;
+        font-size: 28px;
+        margin-bottom: 20px;
+        color: var(--main-color);
+      "
+    >
+      racers
+    </h4>
+    <table id="racer-tables">
+      <thead>
+        <div class="grid headerfortable">
+          <div style="width: 25%;">name</div>
+          <div style="width: 25%;">age</div>
+          <div style="width: 25%;">car</div>
+          <div style="width: 25%;">followers</div>
+          <div style="width: 25%;">follow/unfollow</div>
+        </div>
+      </thead>
+      <tbody  id="racers-list"></tbody>
+    </table>
+    <h4
+      style="
+        text-align: center;
+        font-size: 28px;
+        margin-bottom: 20px;
+        color: var(--main-color);
+      "
+    >
+      posts
+    </h4>
+    <!---->
+    <div class="flex headerfortable">
+      <div>post</div>
+      <div >date</div>
+    </div>
+
+    <div id="posts-list"></div>
+    <!--===============================================================================================-->
+
+    <h4
+    style="
+      text-align: center;
+      font-size: 28px;
+      margin-bottom: 20px;
+      color: var(--main-color);
+    "
+  >
+    races
+  </h4>
+  <div class="flex headerfortable">
+    <div >racers</div>
+    <div >time</div>
+  </div>
+
+    <div id="races">
+
+      
+    </div>
+    <!--===============================================================================================-->
+
+    <script type="module" src="js/main.js"></script>
+
+    <!------------>
+    <script>
+      //------Secure the page from someone entering the path
+      let auth = localStorage.getItem('auth')
+
+      if (auth == 'user') {
+      } else {
+        window.location.href = '/tp-car'
+      }
+    </script>
+    <script src="js/main.js"></script>
+  </body>
+</html>

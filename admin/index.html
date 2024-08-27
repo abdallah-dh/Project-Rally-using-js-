@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Dashboard</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700;800;900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="css/main.css" />
+  </head>
+  <body>
+    <div class="logout">
+      <button onclick="logout()">logout</button>
+    </div>
+    <div class="forms-one">
+      <div class="formbold-main-wrapper">
+        <div class="formbold-form-wrapper">
+          <div class="formbold-form-title">
+            <h3>Add user</h3>
+          </div>
+          <form>
+            <input
+              type="email"
+              name="email"
+              id="email"
+              placeholder="Enter email address"
+              class="formbold-form-input"
+            />
+            <input
+              type="text"
+              name="username"
+              id="username"
+              placeholder="Enter username"
+              class="formbold-form-input"
+            />
+            <input
+              type="password"
+              name="pass"
+              id="pass"
+              placeholder="Enter password"
+              class="formbold-form-input"
+            />
+            <button onclick="adduser()" class="formbold-btn">ADD</button>
+          </form>
+        </div>
+      </div>
+      <div class="formbold-main-wrapper">
+        <div class="formbold-form-wrapper">
+          <div class="formbold-form-title">
+            <h3>Add racer (pilot)</h3>
+          </div>
+          <form>
+            <input
+              type="text"
+              name="racername"
+              id="name"
+              placeholder="Enter name"
+              class="formbold-form-input"
+            />
+            <input
+              type="text"
+              name="racerage"
+              id="age"
+              placeholder="Enter age"
+              class="formbold-form-input"
+            />
+            <input
+              type="email"
+              name="raceremail"
+              id="emailr"
+              placeholder="Enter email address"
+              class="formbold-form-input"
+            />
+            <select name="racerCar" id="racerCar" class="formbold-form-input"></select>
+            <button onclick="addracer()" class="formbold-btn">ADD</button>
+          </form>
+        </div>
+      </div>
+      <div class="formbold-main-wrapper">
+        <div class="formbold-form-wrapper">
+          <div class="formbold-form-title">
+            <h3>Add car</h3>
+          </div>
+          <form>
+            <input
+              type="text"
+              name="mat"
+              id="mat"
+              placeholder="Enter mat"
+              class="formbold-form-input"
+            />
+            <input
+              type="text"
+              name="brand"
+              id="brand"
+              placeholder="Enter brand"
+              class="formbold-form-input"
+            />
+            <input
+              type="text"
+              name="model"
+              id="model"
+              placeholder="Enter model"
+              class="formbold-form-input"
+            />
+
+            <button onclick="addcar()" class="formbold-btn">ADD</button>
+          </form>
+        </div>
+      </div>
+    </div>
+    <div class="forms-one" style="margin-top: 10px">
+      <div class="formbold-main-wrapper">
+        <div class="formbold-form-wrapper">
+          <div class="formbold-form-title">
+            <h3>Add Race (course)</h3>
+          </div>
+
+          <input
+            type="text"
+            name="place"
+            id="place"
+            placeholder="Enter race place"
+            class="formbold-form-input"
+          />
+          <select name="racer1" class="formbold-form-input"></select>
+          <select name="racer2" class="formbold-form-input"></select>
+          <input
+            type="date"
+            name="dater"
+            id="dater"
+            placeholder="Enter date"
+            class="formbold-form-input"
+          />
+          <button onclick="addrace()" class="formbold-btn">ADD</button>
+        </div>
+      </div>
+    </div>
+    
+    <div class="forms-one" style="margin-top: 10px">
+      <div class="formbold-main-wrapper">
+        <div class="formbold-form-wrapper">
+          <div class="formbold-form-title">
+            <h3>Add Post</h3>
+          </div>
+
+          <textarea
+            name="post"
+            id="postArea"
+            cols="30"
+            rows="10"
+            placeholder="Enter post"
+            class="formbold-form-input"
+          ></textarea>
+          <button onclick="addPost()" class="formbold-btn">publish</button>
+        </div>
+      </div>
+    </div>
+    <div class="containerTable">
+      <h4
+        style="
+          text-align: center;
+          font-size: 28px;
+          margin-bottom: 20px;
+          color: var(--main-color);
+        "
+      >
+        Users
+      </h4>
+      <table>
+        <thead>
+          <tr class="header">
+            <th style="width: 25%">Email</th>
+            <th style="width: 25%">Name</th>
+            <th style="width: 25%">Password</th>
+            <th style="width: 25%">Edit</th>
+          </tr>
+        </thead>
+        <tbody id="userTable"></tbody>
+      </table>
+    </div>
+    <div class="containerTable">
+      <h4
+        style="
+          text-align: center;
+          font-size: 28px;
+          margin-bottom: 20px;
+          color: var(--main-color);
+        "
+      >
+        Les demandes
+      </h4>
+      <table id="myTable">
+        <tr class="header">
+          <th style="width: 25%">Email</th>
+          <th style="width: 25%">Name</th>
+          <th style="width: 25%">Edit</th>
+        </tr>
+        <tbody id="demandes"></tbody>
+      </table>
+    </div>
+    <div class="containerTable">
+      <h4
+        style="
+          text-align: center;
+          font-size: 28px;
+          margin-bottom: 20px;
+          color: var(--main-color);
+        "
+      >
+        Cars
+      </h4>
+      <table>
+        <tr class="header">
+          <th style="width: 25%">Mat</th>
+          <th style="width: 25%">Brand</th>
+          <th style="width: 25%">Modal</th>
+          <th style="width: 25%">Edit</th>
+        </tr>
+        <tbody id="cars-data"></tbody>
+      </table>
+    </div>
+    <div class="containerTable">
+      <h4
+        style="
+          text-align: center;
+          font-size: 28px;
+          margin-bottom: 20px;
+          color: var(--main-color);
+        "
+      >
+        Races
+      </h4>
+      <table id="myTable">
+        <tr class="header">
+          <th style="width: 25%">Place</th>
+          <th style="width: 25%">Racers</th>
+          <th style="width: 25%">Date</th>
+          <th style="width: 25%">Edit</th>
+        </tr>
+        <tbody id="races"></tbody>
+      </table>
+    </div>
+    <div class="containerTable">
+      <h4
+        style="
+          text-align: center;
+          font-size: 28px;
+          margin-bottom: 20px;
+          color: var(--main-color);
+        "
+      >
+        Events
+      </h4>
+      <table id="myTable">
+        <tr class="header">
+          <th style="width: 25%">Username</th>
+          <th style="width: 25%">Eventtype</th>
+          <th style="width: 25%">Date</th>
+        </tr>
+        <tbody id="events"></tbody>
+      </table>
+      <button id="clearEvents" class="clearEvents">clear events</button>
+    </div>
+    <script>
+      //------Secure the page from someone entering the path
+      let auth = localStorage.getItem("auth");
+
+      if (auth == "admin") {
+      } else {
+        window.location.href = "/";
+      }
+    </script>
+    <script src="js/main.js"></script>
+  </body>
+</html>

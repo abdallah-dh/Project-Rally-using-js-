@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Dashboard</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700;800;900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="css/main.css" />
+  </head>
+  <body class="background">
+    <div class="flex">
+      <div class="BtnStyle logout">
+        <button onclick="home()">
+          home
+        </button>
+      </div>
+      <div class="logout">
+        <button onclick="logout()">
+          logout
+        </button>
+      </div>
+    </div>
+
+    <div class="containerTable">
+      <h4
+        style="
+          text-align: center;
+          font-size: 28px;
+          margin-bottom: 20px;
+          color: var(--main-color);
+        "
+      >
+        User Info
+      </h4>
+      <table id="myTable">
+        <div class="flex whitecolor padding border-b-white">
+          <div>Email</div>
+          <div>Name</div>
+          <div>Password</div>
+        </div>
+        <tr>
+          <div class="flex whitecolor" id="user-info"></div>
+        </tr>
+      </table>
+    </div>
+    <div class="forms-one" style="margin-top: 10px;">
+      <div class="formbold-main-wrapper">
+        <div class="formbold-form-wrapper">
+          <div class="formbold-form-title">
+            <h3>Change Info</h3>
+          </div>
+          <div>
+            <input
+              type="email"
+              name="email"
+              id="email"
+              placeholder="Enter email address"
+              class="formbold-form-input"
+            />
+            <input
+              type="text"
+              name="username"
+              id="username"
+              placeholder="Enter username"
+              class="formbold-form-input"
+            />
+            <input
+              type="password"
+              name="pass"
+              id="pass"
+              placeholder="Enter password"
+              class="formbold-form-input"
+            />
+            <button onclick="ChangeInfo()" class="formbold-btn">
+              Save
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script type="module" src="js/main.js"></script>
+
+    <!------------>
+    <script>
+      //------Secure the page from someone entering the path
+      let auth = localStorage.getItem('auth')
+
+      if (auth == 'user') {
+      } else {
+        window.location.href = '/tp-car'
+      }
+    </script>
+    <script src="js/main.js"></script>
+  </body>
+</html>

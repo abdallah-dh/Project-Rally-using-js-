@@ -1,0 +1,161 @@
+:root {
+    --black-color: #303030;
+    --white-color: white;
+    --alt-white-color: #fcfcfc;
+    --main-color: #ff7b00;
+}
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    font-family: 'Cairo', sans-serif;
+    overflow-x: hidden;
+    font-size: 18px;
+    font-weight: 600;
+    background-color: var(--alt-white-color);
+    color: var(--black-color);
+}
+p {
+    line-height: 1.4;
+}
+body .logout {
+    display: flex;
+    justify-content: flex-end;
+}
+body .logout button {
+    background-color: var(--main-color);
+    padding: 12px 25px;
+    border-radius: 8px;
+    border: none;
+    position: relative;
+    right: 16px;
+    margin: 20px 0;
+    font-size: 18px;
+    font-weight: 600;
+    cursor: pointer;
+    color: white;
+}
+.forms-one {
+    display: flex;
+    gap: 15px;
+    padding: 0 16px;
+}
+.formbold-main-wrapper {
+    display: flex;
+    flex: 1;
+    align-items: center;
+    justify-content: center;
+    background: white;
+    padding: 48px;
+  }
+
+  .formbold-form-wrapper {
+    margin: 0 auto;
+    width: 90%;
+  }
+
+  .formbold-form-title {
+    display: flex;
+    justify-content: center;
+    text-align: center;
+  }
+  .formbold-form-title h3 {
+    color: var(--main-color);
+    font-weight: 700;
+    font-size: 28px;
+    line-height: 35px;
+    width: 60%;
+    margin-bottom: 20px;
+  }
+  .formbold-form-input {
+    text-align: center;
+    width: 100%;
+    padding: 14px 22px;
+    border-radius: 6px;
+    border: 1px solid #DDE3EC;
+    background: #FAFAFA;
+    font-weight: 500;
+    font-size: 16px;
+    color:  var(--black-color);
+    outline: none;
+    resize: none;
+    margin-bottom: 10px;
+  }
+  .formbold-form-input:focus {
+    border-color:  var(--black-color);
+    box-shadow: 0px 3px 8px rgba(0, 0, 0, 0.05);
+  }
+
+  .formbold-btn {
+    text-align: center;
+    width: 100%;
+    font-size: 16px;
+    border-radius: 5px;
+    padding: 14px 25px;
+    border: none;
+    font-weight: 500;
+    background-color: var(--main-color);
+    color: white;
+    cursor: pointer;
+    margin-top: 10px;
+  }
+  .formbold-btn:hover {
+    box-shadow: 0px 3px 8px rgba(0, 0, 0, 0.05);
+  }
+  .containerTable {
+    padding: 0 16px;
+    margin: 20px 0;
+  }
+  table {
+    border-collapse: collapse; /* Collapse borders */
+    width: 100%; /* Full-width */
+    border: 1px solid #ddd; /* Add a grey border */
+    font-size: 18px; /* Increase font-size */
+  }
+  table th {
+    background-color: var(--main-color);
+    color: white;
+  }
+  table th, table td {
+    text-align: left; /* Left-align text */
+    padding: 12px; /* Add padding */
+  }
+  
+  table tr {
+    /* Add a bottom border to all table rows */
+    border-bottom: 1px solid #ddd;
+  }
+  
+  table tr.header, #myTable tr:hover {
+    /* Add a grey background color to the table header and on hover */
+    background-color: #f1f1f1;
+  }
+  .tdEdit {
+    display: flex;
+    gap: 10px;
+  }
+  table button {
+    background-color: rgb(255, 53, 53);
+    padding: 8px 25px;
+    border-radius: 8px;
+    border: none;
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+    color: white;
+  }
+
+.clearEvents {
+  all: unset;
+  cursor: pointer;
+  width: 90%;
+  text-align: center;
+  margin: 20px 90px;
+  padding: 4px 8px;
+  background-color: #ff7b00;
+  border-radius: 5px;
+  color: #f1f1f1;
+}
